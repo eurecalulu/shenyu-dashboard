@@ -16,7 +16,9 @@
  */
 
 import React, { Component } from "react";
-import { Modal, Form } from "antd";
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Modal } from "antd";
 // import styles from "./index.less";
 import TableTransferComponent from "./TableTransfer"
 import { getIntlContent } from "../../../utils/IntlUtils";

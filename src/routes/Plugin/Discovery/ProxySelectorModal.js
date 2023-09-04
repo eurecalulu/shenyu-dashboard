@@ -17,7 +17,21 @@
 
 import React, {Component} from "react";
 import {connect} from "dva";
-import {Button, Col, Divider, Form, Input, InputNumber, Modal, Row, Select, Table, Tabs, Tooltip} from "antd";
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import {
+  Button,
+  Col,
+  Divider,
+  Input,
+  InputNumber,
+  Modal,
+  Row,
+  Select,
+  Table,
+  Tabs,
+  Tooltip,
+} from "antd";
 import classnames from "classnames";
 import {getIntlContent} from "../../../utils/IntlUtils";
 import EditableTable from './UpstreamTable';

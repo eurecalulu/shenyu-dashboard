@@ -16,7 +16,9 @@
  */
 
 import React, {Component} from "react";
-import {Form, Select, Row, Col, Input, Button, Tabs, Table} from "antd";
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Select, Row, Col, Input, Button, Tabs, Table } from "antd";
 import {getIntlContent} from '../../../utils/IntlUtils'
 
 const {Option} = Select;

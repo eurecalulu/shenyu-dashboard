@@ -17,7 +17,10 @@
 
 /* eslint-disable no-unused-expressions */
 /* eslint-disable radix */
-import { Modal, Form, Input, Select, message, Radio } from "antd";
+import { Form } from '@ant-design/compatible';
+
+import '@ant-design/compatible/assets/index.css';
+import { Modal, Input, Select, message, Radio } from "antd";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Method, RPCTYPE, API_SOURCE_TYPE, STATE_TYPE } from "./globalData";

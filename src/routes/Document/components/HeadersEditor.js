@@ -15,7 +15,9 @@
  * limitations under the License.
  */
 
-import { Col, Input, Row, Button, Icon, Typography } from "antd";
+import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
+
+import { Col, Input, Row, Button, Typography } from "antd";
 import React, {Fragment, useEffect, useState} from "react";
 
 const { Text } = Typography;
@@ -77,11 +79,7 @@ function HeadersEditor(props) {
           <Col span={2} style={{ textAlign: "center" }}>
             {!item.required && (
               <Text type="danger">
-                <Icon
-                  style={{ fontSize: "16px" }}
-                  type="minus-circle-o"
-                  onClick={() => onDeleteItem(item.key)}
-                />
+                <MinusCircleOutlined style={{ fontSize: "16px" }} onClick={() => onDeleteItem(item.key)} />
               </Text>
             )}
           </Col>
@@ -90,7 +88,7 @@ function HeadersEditor(props) {
 
       <Col span={24}>
         <Button block type="dashed" onClick={onAddItem}>
-          <Icon type="plus" /> {buttonText}
+          <PlusOutlined /> {buttonText}
         </Button>
       </Col>
     </Row>

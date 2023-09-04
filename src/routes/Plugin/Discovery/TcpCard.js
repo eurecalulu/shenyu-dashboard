@@ -16,7 +16,8 @@
  */
 
 import React, {Component} from "react";
-import {Card, Popover, Typography, Skeleton, Icon, Popconfirm} from "antd";
+import { DeleteOutlined, EditOutlined, QuestionCircleOutlined, ReloadOutlined } from '@ant-design/icons';
+import { Card, Popover, Typography, Skeleton, Popconfirm } from "antd";
 
 import {getIntlContent} from "../../../utils/IntlUtils";
 import tcpStyles from "./tcp.less";
@@ -70,21 +71,29 @@ export class TcpCard extends Component {
           className={tcpStyles.tcpCard}
           actions={[
             <AuthButton perms="plugin:tcp:modify">
-              <Icon type="reload" key="reload" style={{color: '#2E496E', fontSize: "17px"}} onClick={() => handleRefresh(data.discoveryHandlerId)} />
+              <ReloadOutlined
+                key="reload"
+                style={{color: '#2E496E', fontSize: "17px"}}
+                onClick={() => handleRefresh(data.discoveryHandlerId)}
+              />
             </AuthButton>,
             <AuthButton perms="plugin:tcp:modify">
-              <Icon type="edit" key="edit" style={{color: "#1352A2", fontSize: "17px"}} onClick={() => updateSelector(data.id)} />
+              <EditOutlined
+                key="edit"
+                style={{color: "#1352A2", fontSize: "17px"}}
+                onClick={() => updateSelector(data.id)}
+              />
             </AuthButton>,
             <Popconfirm
               title={getIntlContent("SHENYU.DISCOVERY.SELECTOR.DELETE.CONFIRM")}
-              icon={<Icon type="question-circle-o" style={{ color: "#CC0000" }} />}
+              icon={<QuestionCircleOutlined style={{ color: "#CC0000" }} />}
               onConfirm={() => handleDelete(data.id)}
               okText={getIntlContent("SHENYU.COMMON.YES")}
               cancelText={getIntlContent("SHENYU.COMMON.NO")}
               key="popconfirm"
             >
               <AuthButton perms="plugin:tcpSelector:delete">
-                <Icon type="delete" key="delete" style={{color: "#CC0000", fontSize: "17px"}} />
+                <DeleteOutlined key="delete" style={{color: "#CC0000", fontSize: "17px"}} />
               </AuthButton>,
             </Popconfirm>
           ]}
@@ -107,6 +116,6 @@ export class TcpCard extends Component {
           </Skeleton>
         </Card>
       </Popover>
-    )
+    );
   }
 }

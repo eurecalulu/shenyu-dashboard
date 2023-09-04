@@ -16,7 +16,9 @@
  */
 
 import React, { Component } from "react";
-import { Button, Col, Icon, Input, message, Popconfirm, Row, Table, Tree } from "antd";
+import { Icon as LegacyIcon } from '@ant-design/compatible';
+import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
+import { Button, Col, Input, message, Popconfirm, Row, Table, Tree } from "antd";
 import { connect } from "dva";
 import AddModal from "./AddModal";
 import { getIntlContent } from "../../../utils/IntlUtils";
@@ -255,14 +257,13 @@ export default class Resource extends Component {
             <TreeNode
               title={
                 <div style={{width:"200px",display:"flex",justifyContent:"space-between"}}>
-                  <span>{item.meta.icon&&<span style={{width:"24px",height:"24px",lineHeight:"24px",margin:"0 5px"}}><Icon type={item.meta.icon} /></span>}{item.title}</span>
+                  <span>{item.meta.icon&&<span style={{width:"24px",height:"24px",lineHeight:"24px",margin:"0 5px"}}><LegacyIcon type={item.meta.icon} /></span>}{item.title}</span>
                   <span>
-                    <Icon
+                    <EditOutlined
                       onClick={(e)=>{
                         e.stopPropagation();
                         this.editClick(item);
                       }}
-                      type="edit"
                     />
                   </span>
                 </div>
@@ -275,28 +276,27 @@ export default class Resource extends Component {
           );
         }else{
           return (
-            <TreeNode title={item.title} icon={item.meta.icon&&<Icon type={item.meta.icon} />} key={item.id} dataRef={item}>
+            <TreeNode title={item.title} icon={item.meta.icon&&<LegacyIcon type={item.meta.icon} />} key={item.id} dataRef={item}>
               {this.renderTreeNodes(item.children)}
             </TreeNode>
           );
         }
       }
       if(!currentMenu || item.id !== currentMenu.id){
-        return <TreeNode icon={item.meta.icon&&<Icon type={item.meta.icon} />} title={item.title} key={item.id} dataRef={item} />;
+        return <TreeNode icon={item.meta.icon&&<LegacyIcon type={item.meta.icon} />} title={item.title} key={item.id} dataRef={item} />;
       } else {
         return (
           <TreeNode
             title={
               <div style={{width:"200px",display:"flex",justifyContent:"space-between"}}>
-                <span>{item.meta.icon&&<span style={{width:"24px",height:"24px",lineHeight:"24px",margin:"0 5px"}}><Icon type={item.meta.icon} /></span>}{item.title}</span>
+                <span>{item.meta.icon&&<span style={{width:"24px",height:"24px",lineHeight:"24px",margin:"0 5px"}}><LegacyIcon type={item.meta.icon} /></span>}{item.title}</span>
                 <span>
                   <AuthButton perms="system:resource:editMenu">
-                    <Icon
+                    <EditOutlined
                       onClick={(e)=>{
                         e.stopPropagation();
                         this.editClick(item);
                       }}
-                      type="edit"
                     />
                   </AuthButton>
                   {!item.url.startsWith("/plug/") && (
@@ -311,12 +311,11 @@ export default class Resource extends Component {
                         okText={getIntlContent("SHENYU.COMMON.SURE")}
                         cancelText={getIntlContent("SHENYU.COMMON.CALCEL")}
                       >
-                        <Icon
+                        <DeleteOutlined
                           style={{marginLeft:10}}
                           onClick={(e)=>{
                             e.stopPropagation();
                           }}
-                          type="delete"
                         />
                       </Popconfirm>
                     </AuthButton>
@@ -355,7 +354,7 @@ export default class Resource extends Component {
         key: "icon",
         width: 60,
         render: text => {
-          return  <Icon type={text} /> || text;
+          return <LegacyIcon type={text} /> || text;
         }
       },
       {

@@ -16,7 +16,9 @@
  */
 
 import React, { Component } from "react";
-import { Modal, Form, Select, Input, Switch, Button, message, DatePicker, TimePicker } from "antd";
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Modal, Select, Input, Switch, Button, message, DatePicker, TimePicker } from "antd";
 import { connect } from "dva";
 import styles from "../index.less";
 import { getIntlContent } from "../../../utils/IntlUtils";

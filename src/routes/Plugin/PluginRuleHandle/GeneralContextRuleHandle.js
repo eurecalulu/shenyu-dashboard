@@ -16,7 +16,9 @@
  */
 
 import React, { Component } from "react";
-import { Tabs, Form, Select, Row, Col, Input, Button } from "antd";
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Tabs, Select, Row, Col, Input, Button } from "antd";
 import styles from "../index.less";
 import { getIntlContent } from "../../../utils/IntlUtils";
 import { titleCase, guid } from "../../../utils/utils";

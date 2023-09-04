@@ -16,18 +16,8 @@
  */
 
 import React, { Component } from "react";
-import {
-  Modal,
-  Tree,
-  Icon,
-  Button,
-  Checkbox,
-  Table,
-  Row,
-  Col,
-  Input,
-  Empty
-} from "antd";
+import { Icon as LegacyIcon } from '@ant-design/compatible';
+import { Modal, Tree, Button, Checkbox, Table, Row, Col, Input, Empty } from "antd";
 import { connect } from "dva";
 import { getIntlContent } from "../../../utils/IntlUtils";
 import { titleCase } from "../../../utils/utils";
@@ -296,7 +286,7 @@ export default class DataPermModal extends Component {
           <TreeNode
             selectable={item.selectable}
             title={item.title}
-            icon={<Icon type={item.icon} />}
+            icon={<LegacyIcon type={item.icon} />}
             key={item.key}
             dataRef={item}
           >
@@ -306,7 +296,7 @@ export default class DataPermModal extends Component {
       } else {
         return (
           <TreeNode
-            icon={<Icon type={item.icon} />}
+            icon={<LegacyIcon type={item.icon} />}
             title={item.title}
             key={item.key}
             dataRef={item}

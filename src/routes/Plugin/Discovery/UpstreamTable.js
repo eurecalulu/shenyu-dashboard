@@ -1,5 +1,7 @@
 import React, {Component, createContext} from "react";
-import { Table, Input, Button, Popconfirm, Form } from 'antd';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Table, Input, Button, Popconfirm } from 'antd';
 import AuthButton from "../../../utils/AuthButton";
 import {getIntlContent} from "../../../utils/IntlUtils";
 

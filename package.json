@@ -20,8 +20,10 @@
     "prettier": "prettier --write ./src/**/**/**/*"
   },
   "dependencies": {
+    "@ant-design/compatible": "^1.0.0",
+    "@ant-design/icons": "^4.0.0",
     "@babel/polyfill": "^7.0.0-beta.36",
-    "antd": "^3.26.19",
+    "antd": "^4.0.0",
     "classnames": "^2.2.5",
     "dayjs": "^1.8.17",
     "dva": "^2.2.3",
@@ -43,6 +45,7 @@
     "react-intl-universal": "^2.4.2",
     "react-json-view": "^1.21.3",
     "react-resizable": "^1.11.0",
+    "react-router-dom": "^6.15.0",
     "redux-logger": "^3.0.6",
     "setprototypeof": "^1.1.0",
     "url-polyfill": "^1.0.10"

@@ -17,17 +17,9 @@
 
 /* eslint-disable react/no-access-state-in-setstate */
 import React, { Component } from "react";
-import {
-  Tabs,
-  Form,
-  Select,
-  Row,
-  Col,
-  Input,
-  Button,
-  Table,
-  InputNumber
-} from "antd";
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Tabs, Select, Row, Col, Input, Button, Table, InputNumber } from "antd";
 import { getIntlContent } from "../../../utils/IntlUtils";
 
 const { Option } = Select;

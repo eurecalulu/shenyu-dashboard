@@ -19,7 +19,8 @@ import React, { Fragment } from "react";
 import { Link, Redirect, Switch, Route } from "dva/router";
 import DocumentTitle from "react-document-title";
 import { connect } from "dva";
-import { Icon, message } from "antd";
+import { CopyrightOutlined } from '@ant-design/icons';
+import { message } from "antd";
 import GlobalFooter from "../components/GlobalFooter";
 import styles from "./UserLayout.less";
 import TitleLogo from "../assets/TitleLogo.svg";
@@ -34,7 +35,7 @@ const links = [];
 
 const copyright = (
   <Fragment>
-    Copyright <Icon type="copyright" /> {new Date().getFullYear()} The Apache Software Foundation, Licensed under the Apache License, Version 2.0. Apache ShenYu, Apache, the Apache feather logo, the Apache ShenYu logo are trademarks of The Apache Software Foundation.
+    Copyright <CopyrightOutlined /> {new Date().getFullYear()} The Apache Software Foundation, Licensed under the Apache License, Version 2.0. Apache ShenYu, Apache, the Apache feather logo, the Apache ShenYu logo are trademarks of The Apache Software Foundation.
   </Fragment>
 );
 

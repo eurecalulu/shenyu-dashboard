@@ -16,7 +16,8 @@
  */
 
 import React, { Component, Fragment } from 'react';
-import { Modal, Card, Icon, Button, Input } from 'antd';
+import { Icon as LegacyIcon } from '@ant-design/compatible';
+import { Modal, Card, Button, Input } from 'antd';
 import styles from "./IconModal.less";
 import { getIntlContent } from '../../../utils/IntlUtils';
 
@@ -460,18 +461,18 @@ export default class IconModal extends Component {
                       {iconMap[groupName].map(icon => {
                           return this.filterSearch(icon,filterText) ? (
                             <div key={icon} onClick={()=>{onChooseIcon(icon);}} className={styles.iconContent}>
-                              <Icon style={{fontSize:20}} type={icon} />
+                              <LegacyIcon style={{fontSize:20}} type={icon} />
                               <span>{icon}</span>
                             </div>
                           ) : null;
                       })}
                     </div>
                   </Fragment>
-                )
+                );
             })
            }
         </Card>
       </Modal>
-    )
+    );
   }
 }

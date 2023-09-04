@@ -16,7 +16,9 @@
  */
 
 import React, { Component, forwardRef, Fragment } from "react";
-import { Modal, Form, Switch, Input, Select, Divider, InputNumber, Button} from "antd";
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Modal, Switch, Input, Select, Divider, InputNumber, Button } from "antd";
 import { connect } from "dva";
 import { getIntlContent } from "../../../utils/IntlUtils";
 

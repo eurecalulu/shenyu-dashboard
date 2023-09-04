@@ -16,7 +16,9 @@
  */
 
 import React, { Component, Fragment } from "react";
-import { Form, Select, Input} from "antd";
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Select, Input } from "antd";
 import classnames from 'classnames';
 import { connect } from "dva";
 import styles from "../index.less";
@@ -133,7 +135,7 @@ export default class HystrixRuleHandle extends Component {
   render() {
     const labelWidth = 160
     const { form, platform: {hystrixIsolationModeEnums} } = this.props;
-    const { getFieldDecorator } = form;;
+    const { getFieldDecorator } = form;
     const {
         requestVolumeThreshold,
         errorThresholdPercentage,

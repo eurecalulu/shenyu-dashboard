@@ -16,9 +16,11 @@
  */
 
 import React, { Component, Fragment } from "react";
+import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
 import {
   Modal,
-  Form,
   Select,
   Input,
   Switch,
@@ -29,10 +31,9 @@ import {
   Row,
   Col,
   Card,
-  Icon,
   InputNumber,
   DatePicker,
-  TimePicker
+  TimePicker,
 } from "antd";
 import { connect } from "dva";
 import classnames from "classnames";
@@ -460,13 +461,12 @@ class AddModal extends Component {
                 </Row>
               </div>
               <div style={{ width: 64, textAlign: "right" }}>
-                <Icon
+                <MinusCircleOutlined
                   onClick={() => {
                     setFieldsValue({
                       keys: keys.filter(k => k !== key)
                     });
                   }}
-                  type="minus-circle-o"
                   style={{
                     fontSize: 18,
                     color: "#ff0000",
@@ -523,7 +523,7 @@ class AddModal extends Component {
                   });
                 }}
                 >
-                  <Icon type="plus" /> Add divide upstream
+                  <PlusOutlined /> Add divide upstream
                 </Button>
               </Item>
             </Col>

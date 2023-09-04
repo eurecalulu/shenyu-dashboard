@@ -16,7 +16,8 @@
  */
 
 import React from 'react';
-import { Input, Icon } from 'antd';
+import { HomeOutlined, LockOutlined, MailOutlined, MobileOutlined, UserOutlined } from '@ant-design/icons';
+import { Input } from 'antd';
 import styles from './index.less'
 import { getIntlContent } from '../../utils/IntlUtils';
 
@@ -25,7 +26,7 @@ const map = {
     component: Input,
     props: {
       size: 'large',
-      prefix: <Icon type="home" className={styles.prefixIcon} />,
+      prefix: <HomeOutlined className={styles.prefixIcon} />,
     },
     rules: [
       {
@@ -39,7 +40,7 @@ const map = {
     component: Input,
     props: {
       size: 'large',
-      prefix: <Icon type="user" className={styles.prefixIcon} />,
+      prefix: <UserOutlined className={styles.prefixIcon} />,
       placeholder: 'admin',
     },
     rules: [
@@ -53,7 +54,7 @@ const map = {
     component: Input,
     props: {
       size: 'large',
-      prefix: <Icon type="lock" className={styles.prefixIcon} />,
+      prefix: <LockOutlined className={styles.prefixIcon} />,
       type: 'password',
       placeholder: '888888',
     },
@@ -68,7 +69,7 @@ const map = {
     component: Input,
     props: {
       size: 'large',
-      prefix: <Icon type="mobile" className={styles.prefixIcon} />,
+      prefix: <MobileOutlined className={styles.prefixIcon} />,
       placeholder: 'mobile number',
     },
     rules: [
@@ -86,7 +87,7 @@ const map = {
     component: Input,
     props: {
       size: 'large',
-      prefix: <Icon type="mail" className={styles.prefixIcon} />,
+      prefix: <MailOutlined className={styles.prefixIcon} />,
       placeholder: 'captcha',
     },
     rules: [

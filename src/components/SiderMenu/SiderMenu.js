@@ -16,7 +16,8 @@
  */
 
 import React, { PureComponent } from "react";
-import { Layout, Menu, Icon, Switch } from "antd";
+import { Icon as LegacyIcon } from '@ant-design/compatible';
+import { Layout, Menu, Switch } from "antd";
 import pathToRegexp from "path-to-regexp";
 import { Link } from "dva/router";
 import styles from "./index.less";
@@ -42,7 +43,7 @@ const getIcon = icon => {
         />
       );
     }
-    return <Icon type={icon} />;
+    return <LegacyIcon type={icon} />;
   }
 
   return icon;

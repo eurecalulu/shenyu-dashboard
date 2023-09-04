@@ -16,7 +16,10 @@
  */
 
 import React, { PureComponent } from "react";
-import { Dropdown, Form, Icon, Input, Menu, Modal, Button } from "antd";
+import Icon, { FormOutlined, LogoutOutlined, QuestionCircleOutlined, UserOutlined } from '@ant-design/icons';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Dropdown, Input, Menu, Modal, Button } from "antd";
 import { connect } from "dva";
 import styles from "./index.less";
 import { getIntlContent, getCurrentLocale } from "../../utils/IntlUtils";
@@ -132,11 +135,11 @@ class GlobalHeader extends PureComponent {
             this.setState({ visible: true });
           }}
         >
-          <Icon type="form" />{" "}
+          <FormOutlined />{" "}
           {getIntlContent("SHENYU.GLOBALHEADER.CHANGE.PASSWORD")}
         </Menu.Item>
         <Menu.Item key="0" onClick={onLogout}>
-          <Icon type="logout" /> {getIntlContent("SHENYU.GLOBALHEADER.LOGOUT")}
+          <LogoutOutlined /> {getIntlContent("SHENYU.GLOBALHEADER.LOGOUT")}
         </Menu.Item>
       </Menu>
     );
@@ -149,7 +152,7 @@ class GlobalHeader extends PureComponent {
               placement="bottomCenter"
               overlay={this.state.help}
             >
-              <Button><Icon type="question-circle" /></Button>
+              <Button><QuestionCircleOutlined /></Button>
             </Dropdown>
           </div>
           <div className={styles.item}>
@@ -161,7 +164,7 @@ class GlobalHeader extends PureComponent {
             </Dropdown>
           </div>
           <div className={`${styles.item} ${styles.right}`}>
-            <Dropdown.Button overlay={menu} icon={<Icon type="user" />}>
+            <Dropdown.Button overlay={menu} icon={<UserOutlined />}>
               <span>
                 {userName}
               </span>

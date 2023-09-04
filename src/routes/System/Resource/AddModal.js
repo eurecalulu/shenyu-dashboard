@@ -16,7 +16,10 @@
  */
 
 import React, { Component } from 'react';
-import { Modal, Form, Select, InputNumber, Input, Icon, Tooltip } from 'antd';
+import { Form, Icon as LegacyIcon } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { PlusOutlined } from '@ant-design/icons';
+import { Modal, Select, InputNumber, Input, Tooltip } from 'antd';
 import IconModal from "./IconModal";
 import { getIntlContent } from '../../../utils/IntlUtils';
 
@@ -180,10 +183,10 @@ class AddModal extends Component {
                 allowClear
                 readOnly
                 placeholder={getIntlContent("SHENYU.SYSTEM.ICON.INPUT")}
-                prefix={(this.state.icon||icon)&&<Icon type={this.state.icon||icon} />}
+                prefix={(this.state.icon||icon)&&<LegacyIcon type={this.state.icon||icon} />}
                 suffix={
                   <Tooltip title={getIntlContent("SHENYU.SYSTEM.ICON.INPUT")}>
-                    <Icon type="plus" onClick={this.handleChooseIcon} />
+                    <PlusOutlined onClick={this.handleChooseIcon} />
                   </Tooltip>
                 }
               />
@@ -192,7 +195,7 @@ class AddModal extends Component {
         </Form>
         {popup}
       </Modal>
-    )
+    );
   }
 }
 

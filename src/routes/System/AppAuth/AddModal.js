@@ -16,7 +16,9 @@
  */
 
 import React, { Component } from "react";
-import {Modal, Button, Form, Input, Switch, message, Table, Popconfirm} from "antd";
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Modal, Button, Input, Switch, message, Table, Popconfirm } from "antd";
 import styles from "./index.less";
 import { getIntlContent } from "../../../utils/IntlUtils";
 

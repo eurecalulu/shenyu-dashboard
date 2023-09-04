@@ -16,6 +16,7 @@
  */
 
 import React, { Component } from "react";
+import { ReloadOutlined } from '@ant-design/icons';
 import { Table, Row, Col, Button, Input, message, Popconfirm, Switch, Typography, Tag } from "antd";
 import { connect } from "dva";
 import styles from "../index.less";
@@ -806,7 +807,7 @@ export default class Common extends Component {
                 </h3>
                 <AuthButton perms={`plugin:${name}:modify`}>
                   <Button
-                    icon="reload"
+                    icon={<ReloadOutlined />}
                     onClick={this.asyncClick}
                     type="primary"
                   >

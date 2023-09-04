@@ -16,7 +16,10 @@
  */
 
 import React, {Component} from "react";
-import {Modal, Form, Input, InputNumber, Select, Tooltip, Icon, message} from "antd";
+import { QuestionCircleOutlined } from '@ant-design/icons';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Modal, Input, InputNumber, Select, Tooltip, message } from "antd";
 import {connect} from "dva";
 import { getIntlContent } from "../../../utils/IntlUtils";
 
@@ -166,7 +169,7 @@ class AddPluginHandle extends Component {
               <span>
                 {getIntlContent("SHENYU.PLUGIN.RULE")}&nbsp;
                 <Tooltip title={getIntlContent("SHENYU.PLUGIN.RULE.TIP")}>
-                  <Icon type="question-circle-o" />
+                  <QuestionCircleOutlined />
                 </Tooltip>
               </span>
             }

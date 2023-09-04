@@ -16,7 +16,10 @@
 	*/
 
 /* eslint-disable no-unused-expressions */
-import { Modal, Form, Input, message } from "antd";
+import { Form } from '@ant-design/compatible';
+
+import '@ant-design/compatible/assets/index.css';
+import { Modal, Input, message } from "antd";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { getIntlContent } from "../../../utils/IntlUtils";

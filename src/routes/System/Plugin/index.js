@@ -16,6 +16,7 @@
  */
 
 import React, { Component } from "react";
+import { ReloadOutlined } from '@ant-design/icons';
 import { Table, Input, Button, message, Popconfirm, Select, Popover, Tag, Typography } from "antd";
 import { connect } from "dva";
 import { Link } from "dva/router";
@@ -567,7 +568,7 @@ export default class Plugin extends Component {
           <AuthButton perms="system:plugin:modify">
             <Button
               style={{ marginLeft: 20 }}
-              icon="reload"
+              icon={<ReloadOutlined />}
               type="primary"
               onClick={this.syncAllClick}
             >

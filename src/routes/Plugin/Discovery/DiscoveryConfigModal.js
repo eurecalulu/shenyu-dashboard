@@ -16,7 +16,9 @@
  */
 
 import React, {Component} from "react";
-import {Button, Col, Form, Input, Modal, Popconfirm, Row, Select} from "antd";
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Button, Col, Input, Modal, Popconfirm, Row, Select } from "antd";
 import {connect} from "dva";
 import {getIntlContent} from "../../../utils/IntlUtils";
 

@@ -16,7 +16,9 @@
  */
 
 import React, { Component } from "react";
-import { Steps, Divider, Card, Col, Row, Timeline, Statistic, Icon, Popover, Tag, Alert } from 'antd';
+import { Icon as LegacyIcon } from '@ant-design/compatible';
+import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
+import { Steps, Divider, Card, Col, Row, Timeline, Statistic, Popover, Tag, Alert } from 'antd';
 import { connect } from "dva";
 import { routerRedux } from 'dva/router';
 import styles from "./home.less";
@@ -137,7 +139,7 @@ export default class Home extends Component {
                 <div style={{ padding: '10px' }}>
                   <Row gutter={16}>
                     <Col span={12}>
-                      <Statistic title="RPC plugin" value={5} prefix={<Icon type="plugin" />} />
+                      <Statistic title="RPC plugin" value={5} prefix={<LegacyIcon type="plugin" />} />
                     </Col>
                     <Col span={12}>
                       <Statistic title="Active/Plugin" value={7} suffix="/ 28" />
@@ -147,7 +149,7 @@ export default class Home extends Component {
                 <div style={{ padding: '10px' }}>
                   <Row gutter={16}>
                     <Col span={12}>
-                      <Statistic title="rule" value={238} prefix={<Icon type="plugin" />} />
+                      <Statistic title="rule" value={238} prefix={<LegacyIcon type="plugin" />} />
                     </Col>
                     <Col span={12}>
                       <Statistic title="Selector" value={87} suffix="/ 3 plugin" />
@@ -157,7 +159,7 @@ export default class Home extends Component {
                 <div style={{ padding: '10px' }}>
                   <Row gutter={16}>
                     <Col span={12}>
-                      <Statistic title="metadata" value={0} prefix={<Icon type="plugin" />} />
+                      <Statistic title="metadata" value={0} prefix={<LegacyIcon type="plugin" />} />
                     </Col>
                     <Col span={12}>
                       <Statistic title="Dictionary" value={55} />
@@ -172,7 +174,7 @@ export default class Home extends Component {
                         value={11280}
                         precision={0}
                         valueStyle={{ color: '#3f8600' }}
-                        prefix={<Icon type="arrow-up" />}
+                        prefix={<ArrowUpOutlined />}
                         suffix=""
                       />
                     </Col>
@@ -182,7 +184,7 @@ export default class Home extends Component {
                         value={930}
                         precision={0}
                         valueStyle={{ color: '#cf1322' }}
-                        prefix={<Icon type="arrow-down" />}
+                        prefix={<ArrowDownOutlined />}
                         suffix=""
                       />
                     </Col>

@@ -16,7 +16,9 @@
  */
 
 import React, { Component, Fragment } from 'react';
-import { Modal, Form, Input, Tree, Divider } from 'antd';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Modal, Input, Tree, Divider } from 'antd';
 import { getIntlContent } from '../../../utils/IntlUtils';
 import { filterTree }  from '../../../utils/utils';
 

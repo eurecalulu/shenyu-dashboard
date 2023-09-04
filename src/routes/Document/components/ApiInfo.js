@@ -15,12 +15,13 @@
  * limitations under the License.
  */
 
-import { Typography, Table, Tabs, Icon, Row, Col, Button } from "antd";
+import { Typography, Table, Tabs, Row, Col, Button } from "antd";
 import React, { useContext } from "react";
 import ApiDebug from "./ApiDebug";
 import ApiContext from "./ApiContext";
 import { getIntlContent } from "../../../utils/IntlUtils";
 import { Method } from "./globalData";
+import {CodeOutlined, FileTextOutlined} from "@ant-design/icons";
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -143,7 +144,7 @@ function ApiInfo(props) {
         <Tabs.TabPane
           tab={
             <>
-              <Icon type="file-text" />
+              <FileTextOutlined />
               {getIntlContent("SHENYU.DOCUMENT.APIDOC.INFO.INTERFACE.DOCUMENT")}
             </>
           }
@@ -296,7 +297,7 @@ function ApiInfo(props) {
         <Tabs.TabPane
           tab={
             <>
-              <Icon type="code" />
+              <CodeOutlined />
               {getIntlContent("SHENYU.DOCUMENT.APIDOC.INFO.INTERFACE.DEBUG")}
             </>
           }

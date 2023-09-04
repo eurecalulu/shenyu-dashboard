@@ -16,7 +16,9 @@
  */
 
 import React, {Component} from "react";
-import { Modal, Form, Select, Input, Table, Button, Popconfirm, Switch, message } from 'antd';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Modal, Select, Input, Table, Button, Popconfirm, Switch, message } from 'antd';
 import { getIntlContent } from "../../../utils/IntlUtils";
 
 const FormItem = Form.Item;

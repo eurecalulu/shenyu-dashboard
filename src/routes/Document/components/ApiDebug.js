@@ -15,7 +15,12 @@
  * limitations under the License.
  */
 
-import {Button, Col, Empty, Form, Icon, Input, message, Row, Select, Tabs, Typography} from "antd";
+import { FileTextOutlined } from '@ant-design/icons';
+
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+
+import { Button, Col, Empty, Input, message, Row, Select, Tabs, Typography } from "antd";
 import React, {createRef, forwardRef, useContext, useEffect, useImperativeHandle, useState} from "react";
 import ReactJson from "react-json-view";
 import ReactHtmlParser from "react-html-parser";
@@ -294,7 +299,7 @@ const FCForm = forwardRef(({ form, onSubmit }, ref) => {
         <Tabs.TabPane
           tab={
             <>
-              <Icon type="file-text" />
+              <FileTextOutlined />
               BODY
             </>
           }
@@ -319,7 +324,7 @@ const FCForm = forwardRef(({ form, onSubmit }, ref) => {
         <Tabs.TabPane
           tab={
             <>
-              <Icon type="file-text" />
+              <FileTextOutlined />
               QUERY
             </>
           }
