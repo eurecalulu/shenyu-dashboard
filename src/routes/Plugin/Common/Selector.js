@@ -93,7 +93,7 @@ class AddModal extends Component {
     this.initDics();
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const { dispatch, pluginId, handle, multiSelectorHandle } = this.props;
     this.setState({ pluginHandleList: [] });
     let type = 1;
